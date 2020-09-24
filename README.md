@@ -47,8 +47,8 @@ Follow below steps to package Node.js application as a Docker image:
     EXPOSE 9999
     ```
   
-3. build Docker image using `docker build -t 169942020521.dkr.ecr.eu-west-1.amazonaws.com/local/[application name] .` command or `docker build --build-arg SSH_PRIVATE_KEY="$(cat ~/.ssh/id_rsa)"
-   --build-arg SSH_PRIVATE_KEY_PASSPHRASE -t 169942020521.dkr.ecr.eu-west-1.amazonaws.com/local/[application name] .` command if project requires dependencies stored in private GitHub repository
+3. build Docker image with the command `docker build -t 169942020521.dkr.ecr.eu-west-1.amazonaws.com/local/[application name] .` or if project requires dependencies stored in private GitHub repository use command `docker build --build-arg SSH_PRIVATE_KEY="$(cat ~/.ssh/id_rsa)"
+   --build-arg SSH_PRIVATE_KEY_PASSPHRASE -t 169942020521.dkr.ecr.eu-west-1.amazonaws.com/local/[application name] .`
 
 ## License
 
