@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:18-alpine
 
 RUN apk add --no-cache git=~2.24 openssh-client=~8.1 build-base=~0.5
 
