@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 
 RUN apk add --no-cache git=~2.36.3 openssh-client=~9.0 build-base=~0.5
 
@@ -22,6 +22,7 @@ ONBUILD RUN npm install \
             && cp package.json package-lock.json ./node_modules.runtime \
             && npm install --only=production --prefix ./node_modules.runtime
 
+#ONBUILD COPY .. ./
 ONBUILD COPY . ./
 
 ONBUILD RUN npm run build
