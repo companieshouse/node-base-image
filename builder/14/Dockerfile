@@ -22,6 +22,6 @@ ONBUILD RUN npm install \
             && cp package.json package-lock.json ./node_modules.runtime \
             && npm install --only=production --prefix ./node_modules.runtime
 
-ONBUILD COPY . ./
+ONBUILD COPY .. ./
 
 ONBUILD RUN npm run build
